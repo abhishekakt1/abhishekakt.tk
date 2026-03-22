@@ -88,7 +88,7 @@
       position:relative; z-index:1;
       min-height:100vh;
       display:grid;
-      grid-template-columns:1fr 380px;
+      grid-template-columns:1fr 900px;
       align-items:center;
       gap:4rem;
       padding:0 3.5rem;
@@ -103,7 +103,7 @@
 
     .hero-photo-wrap { position:relative; opacity:0; animation:up .7s .25s ease forwards; }
     .hero-photo-wrap::before { content:''; position:absolute; inset:-2px; border-radius:14px; background:linear-gradient(160deg,var(--accent),transparent 60%); z-index:-1; opacity:.5; }
-    .hero-photo { width:100%; aspect-ratio:2/3; object-fit:cover; object-position:top; border-radius:12px; display:block; }
+    .hero-photo { width:100%; ; object-fit:cover; object-position:top; border-radius:12px; display:block; }
 
     @keyframes up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
 
@@ -264,7 +264,7 @@
         min-height:unset;
       }
       /* photo: circular, centered, on top */
-      .hero-photo-wrap { order:-1; max-width:160px; margin:0 auto; }
+      .hero-photo-wrap { order:-1; max-width:260px; margin:0 auto; }
       .hero-photo-wrap::before { border-radius:50%; }
       .hero-photo { border-radius:50%; aspect-ratio:1/1; }
       h1 { font-size:clamp(2rem,10vw,2.8rem); }
@@ -333,10 +333,10 @@
 <!-- ══════════ HERO ══════════ -->
 <section id="hero">
   <div class="hero-text">
-    <div class="h-label">IT Architect · 20 years</div>
+    <div class="h-label">Tech enthusiast</div>
     <h1>Abhishek<br/><em>Tripathi</em></h1>
     <p class="h-bio">
-      I've spent <strong>20 years</strong> designing IT systems and solving hard problems at scale. Outside of work I tinker with IoT, automate my home, grow things, and spend time with animals. This is just my little corner of the internet.
+      I've spent years designing IT systems and solving hard problems at scale. Outside of work I tinker with IoT, automate my home, grow things, and spend time with animals. This is just my little corner of the internet.
     </p>
   </div>
   <div class="hero-photo-wrap">
@@ -406,29 +406,13 @@
 
     <div class="masonry" id="masonry">
 
-      <!--
-      ══════════════════════════════════════════════════════
-      HOW TO ADD PHOTOS:
-
-      <div class="m-item" data-cat="CATEGORY">
-        <img src="images/filename.jpg" alt="description" />
-        <div class="m-overlay">
-          <div class="m-tag">Category Label</div>
-          <div class="m-caption">Your caption here</div>
-        </div>
-        <div class="m-expand">⤢</div>
-      </div>
-
-      data-cat options: iot | home | garden | animals | other
-      ══════════════════════════════════════════════════════
-      -->
-
+   
       <!-- IoT -->
       <div class="m-item" data-cat="iot">
         <img src="images/IOT-waterlevel_sensor.jpg" alt="Water level sensor" />
         <div class="m-overlay">
           <div class="m-tag">IoT & Tech</div>
-          <div class="m-caption">Water level sensor</div>
+          <div class="m-caption">ESP8266 Water Level sensor</div>
         </div>
         <div class="m-expand">⤢</div>
       </div>
@@ -442,46 +426,100 @@
         <div class="m-expand">⤢</div>
       </div>
 
-      <!-- ✏️ ADD MORE PHOTOS BELOW — duplicate the block above -->
+      <div class="m-item" data-cat="iot">
+        <img src="images/iot3.jpg" alt="Solar power ESP8266" />
+        <div class="m-overlay">
+          <div class="m-tag">IoT & Tech</div>
+          <div class="m-caption">Solar power ESP8266 custom PCB</div>
+        </div>
+        <div class="m-expand">⤢</div>
+      </div>
+
+      <div class="m-item" data-cat="iot">
+        <img src="images/homepower.jpg" alt="Home power monitoring" />
+        <div class="m-overlay">
+          <div class="m-tag">IoT & Tech</div>
+          <div class="m-caption">Home power monitoring</div>
+        </div>
+        <div class="m-expand">⤢</div>
+      </div>
+
       <!-- Home -->
       <div class="m-item" data-cat="home">
-        <div class="m-ph" style="aspect-ratio:4/3"><span class="phi">🏠</span><span>home1.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Home</div><div class="m-caption">Caption here</div></div>
+        <img src="images/ha.jpg" alt="Home Assistant" />
+        <div class="m-overlay">
+          <div class="m-tag">Home</div>
+          <div class="m-caption">Home Assistant dashboard</div>
+        </div>
+        <div class="m-expand">⤢</div>
+      </div>
+
+      <div class="m-item" data-cat="home">
+        <img src="images/router-power-bank.jpg" alt="DIY Router Power Bank" />
+        <div class="m-overlay">
+          <div class="m-tag">Home</div>
+          <div class="m-caption">DIY Router Power Bank</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
 
       <!-- Garden -->
       <div class="m-item" data-cat="garden">
-        <div class="m-ph" style="aspect-ratio:3/4"><span class="phi">🌿</span><span>garden1.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Garden</div><div class="m-caption">Caption here</div></div>
+        <img src="images/flower1.jpg" alt="White Hibiscus" />
+        <div class="m-overlay">
+          <div class="m-tag">Garden</div>
+          <div class="m-caption">White Hibiscus</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
 
       <div class="m-item" data-cat="garden">
-        <div class="m-ph" style="aspect-ratio:1/1"><span class="phi">🌱</span><span>garden2.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Garden</div><div class="m-caption">Caption here</div></div>
+        <img src="images/flower2.jpg" alt="Red Rose" />
+        <div class="m-overlay">
+          <div class="m-tag">Garden</div>
+          <div class="m-caption">Red Rose</div>
+        </div>
+        <div class="m-expand">⤢</div>
+      </div>
+
+      <div class="m-item" data-cat="garden">
+        <img src="images/flower3.jpg" alt="Sunflower" />
+        <div class="m-overlay">
+          <div class="m-tag">Garden</div>
+          <div class="m-caption">Sun flower</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
 
       <!-- Animals -->
       <div class="m-item" data-cat="animals">
-        <div class="m-ph" style="aspect-ratio:1/1"><span class="phi">🐾</span><span>animal1.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Animals</div><div class="m-caption">Caption here</div></div>
+        <img src="images/snow_timba.jpg" alt="Snow White & Timba" />
+        <div class="m-overlay">
+          <div class="m-tag">Animals</div>
+          <div class="m-caption">Snow White & Timba</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
 
       <div class="m-item" data-cat="animals">
-        <div class="m-ph" style="aspect-ratio:4/3"><span class="phi">🐕</span><span>animal2.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Animals</div><div class="m-caption">Caption here</div></div>
+        <img src="images/nura.jpeg" alt="Nura" />
+        <div class="m-overlay">
+          <div class="m-tag">Animals</div>
+          <div class="m-caption">Nura</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
 
-      <!-- Other -->
-      <div class="m-item" data-cat="other">
-        <div class="m-ph" style="aspect-ratio:4/3"><span class="phi">📷</span><span>other1.jpg</span></div>
-        <div class="m-overlay"><div class="m-tag">Other</div><div class="m-caption">Caption here</div></div>
+      <div class="m-item" data-cat="animals">
+        <img src="images/sidu.jpg" alt="Sidney" />
+        <div class="m-overlay">
+          <div class="m-tag">Animals</div>
+          <div class="m-caption">Sidney</div>
+        </div>
         <div class="m-expand">⤢</div>
       </div>
+
+      <!-- ✏️ ADD MORE PHOTOS — duplicate any block above -->
 
     </div>
     <div class="empty-state" id="empty">No photos in this category yet.</div>
